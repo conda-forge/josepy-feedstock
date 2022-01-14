@@ -22,7 +22,7 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - cryptography >=0.8
+    - cryptography >=1.5
     - pyopenssl >=0.13
     - python >=3.6
     - setuptools >=1.0
