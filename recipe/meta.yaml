@@ -21,6 +21,7 @@ requirements:
   host:
     - pip
     - python >=3.6
+    - poetry-core >=1.0.8
   run:
     - cryptography >=1.5
     - pyopenssl >=0.13
