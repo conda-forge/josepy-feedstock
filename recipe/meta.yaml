@@ -1,5 +1,5 @@
 {% set name = "josepy" %}
-{% set version = "1.13.0" %}
+{% set version = "1.14.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/josepy-{{ version }}.tar.gz
-  sha256: 8931daf38f8a4c85274a0e8b7cb25addfd8d1f28f9fb8fbed053dd51aec75dc9
+  sha256: 308b3bf9ce825ad4d4bba76372cf19b5dc1c2ce96a9d298f9642975e64bd13dd
 
 build:
   number: 0
@@ -21,6 +21,7 @@ requirements:
   host:
     - pip
     - python >=3.6
+    - poetry-core >=1.0.8
   run:
     - cryptography >=1.5
     - pyopenssl >=0.13
