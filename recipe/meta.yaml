@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/josepy-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/josepy-{{ version }}.tar.gz
   sha256: 308b3bf9ce825ad4d4bba76372cf19b5dc1c2ce96a9d298f9642975e64bd13dd
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - jws = josepy.jws:CLI.run
@@ -20,12 +20,12 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - poetry-core >=1.0.8
   run:
     - cryptography >=1.5
     - pyopenssl >=0.13
-    - python >=3.6
+    - python >={{ python_min }}
     - setuptools >=1.0
 
 test:
@@ -36,6 +36,7 @@ test:
     - jws --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/certbot/josepy
