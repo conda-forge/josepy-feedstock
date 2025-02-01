@@ -1,5 +1,5 @@
 {% set name = "josepy" %}
-{% set version = "1.14.0" %}
+{% set version = "1.15.0" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/josepy-{{ version }}.tar.gz
-  sha256: 308b3bf9ce825ad4d4bba76372cf19b5dc1c2ce96a9d298f9642975e64bd13dd
+  sha256: 46c9b13d1a5104ffbfa5853e555805c915dcde71c2cd91ce5386e84211281223
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - jws = josepy.jws:CLI.run
